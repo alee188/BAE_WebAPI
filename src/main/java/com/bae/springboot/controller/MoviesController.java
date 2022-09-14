@@ -15,7 +15,7 @@ import com.bae.springboot.entities.Movies;
 import com.bae.springboot.service.MoviesServices;
 
 @RestController
-@RequestMapping("/Movies") // adds a prefix to the request URL
+@RequestMapping("/movies") // adds a prefix to the request URL
 public class MoviesController {
 
 	private MoviesServices service;
@@ -45,14 +45,13 @@ public class MoviesController {
 	}
 	
 	// Put request (UPDATE)
-	@PutMapping("/update/{id}")
-	public Movies update(@PathVariable long id @RequestBody Movies movie) {
-		return this.service.update(id,movie);
+	public Movies update(@PathVariable long id,@RequestBody Movies movie) {
+		return this.service.update(id, movie);
 	}
 	
 	// Delete Request (Delete)
 	@DeleteMapping("/delete/{id}")
-		public boolean delete(PathVariable long id) {
+		public boolean delete(@PathVariable long id) {
 		return this.service.delete(id);
 	}
 }

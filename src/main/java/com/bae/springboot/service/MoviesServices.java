@@ -22,7 +22,7 @@ public class MoviesServices {
 	}
 	// get requests (READ)
 	public List<Movies> getALL(){
-		return this.repo.findALL();
+		return this.repo.findAll();
 	}
 	// get by ID (read)
 	public Movies getByID(long id) {
@@ -30,7 +30,7 @@ public class MoviesServices {
 	}
 	// Update requests
 	public Movies update (long id, Movies movie) {
-		Movies existing = this.repo.findByID(id).get();
+		Movies existing = this.repo.findById(id).get();
 		existing.setTitle(movie.getTitle());
 		existing.setGenre(movie.getGenre());
 		existing.setReleaseYear(movie.getReleaseYear());
