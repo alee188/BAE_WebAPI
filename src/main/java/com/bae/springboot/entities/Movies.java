@@ -77,6 +77,27 @@ public class Movies {
 	public void setUserRating(float userRating) {
 		this.userRating = userRating;
 	}
+
+	// hashCode and equals
+	@Override
+	public int hashCode() {
+		return Objects.hash(genre, id, releaseYear, title, userRating);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Movies other = (Movies) obj;
+		return Objects.equals(genre, other.genre) && id == other.id && releaseYear == other.releaseYear
+				&& Objects.equals(title, other.title)
+				&& Float.floatToIntBits(userRating) == Float.floatToIntBits(other.userRating);
+	}
+	
 	
 	
 }
