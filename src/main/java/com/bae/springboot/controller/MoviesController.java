@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bae.springboot.entities.Movies;
+import com.bae.springboot.service.MoviesServices;
 
 @RestController
 @RequestMapping("/Movies") // adds a prefix to the request URL
@@ -33,7 +34,7 @@ public class MoviesController {
 
 	@GetMapping("/getByID/{id}")
 	public Movies getById(@PathVariable Long id) {
-		return this.service.getByid(id);
+		return this.service.getByID(id);
 		
 	}
 	

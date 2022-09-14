@@ -1,8 +1,11 @@
 package com.bae.springboot.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.bae.springboot.entities.Movies;
+import com.bae.springboot.repo.MoviesRepo;
 
 @Service
 public class MoviesServices {
