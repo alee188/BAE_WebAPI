@@ -11,4 +11,8 @@ public class MoviesServices {
 	public MoviesServices (MoviesRepo repo) {
 		this.repo = repo;
 	}
+	// post requests (CREATE)
+	public Movies create(Movies movie) {
+		return this.repo.saveAndFlush(movie);
+	}
 }
