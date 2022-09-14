@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,5 +40,10 @@ public class MoviesController {
 	@PostMapping("/create")
 	public Movies create(@RequestBody Movies movie) {
 		return this.service.create(movie);
+	}
+	
+	@PutMapping("/update/{id}")
+	public Movies update(@PathVariable long id @RequestBody Movies movie) {
+		return this.service.update(id,movie);
 	}
 }
