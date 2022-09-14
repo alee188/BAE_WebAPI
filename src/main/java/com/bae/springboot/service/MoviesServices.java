@@ -1,5 +1,14 @@
 package com.bae.springboot.service;
 
-public class MoviesServices {
+import org.springframework.stereotype.Service;
 
+@Service
+public class MoviesServices {
+	
+	private MoviesRepo repo;
+	
+	// dependency injection
+	public MoviesServices (MoviesRepo repo) {
+		this.repo = repo;
+	}
 }
