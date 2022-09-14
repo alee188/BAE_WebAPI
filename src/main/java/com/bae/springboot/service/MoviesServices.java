@@ -35,4 +35,9 @@ public class MoviesServices {
 		
 		return this.repo.saveAndFlush(existing);
 	}
+	// delete Request (Delete)
+	public boolean delete (long id) {
+		this.repo.deleteById(id);
+		return !this.repo.existsById(id); // returns true if an entry is deleted
+	}
 }
