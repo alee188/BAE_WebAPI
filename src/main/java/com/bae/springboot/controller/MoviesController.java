@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bae.springboot.entities.Movies;
+
 @RestController
 @RequestMapping("/Movies") // adds a prefix to the request URL
 public class MoviesController {
