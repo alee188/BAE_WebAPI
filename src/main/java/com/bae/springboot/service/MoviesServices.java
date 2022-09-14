@@ -2,6 +2,8 @@ package com.bae.springboot.service;
 
 import org.springframework.stereotype.Service;
 
+import com.bae.springboot.entities.Movies;
+
 @Service
 public class MoviesServices {
 	
@@ -14,5 +16,9 @@ public class MoviesServices {
 	// post requests (CREATE)
 	public Movies create(Movies movie) {
 		return this.repo.saveAndFlush(movie);
+	}
+	// get requests (READ)
+	public List<Movies> getALL(){
+		return this.repo.findALL();
 	}
 }
