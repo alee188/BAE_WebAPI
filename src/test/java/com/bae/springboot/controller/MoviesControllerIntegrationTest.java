@@ -1,8 +1,9 @@
 package com.bae.springboot.controller;
 
-import static org.springframework.test.web.client.match.MockRestRequestMatchers.jsonPath;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -16,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.bae.springboot.entities.Movies;
@@ -62,5 +64,20 @@ public class MoviesControllerIntegrationTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(entryAsJSON))
 				.andExpect(content().json(resultAsJSON));
+	}
+	
+	//Update test
+	@Test
+	public void updateTest() throws Exception {
+		Movies entry = new Movies (1L, "Star wars 2", "Action", 1980, 8.7f);
+		Movies result = new Movies (1L, "Star wars 2", "Action", 1980, 8.7f);
+		String entryAsJSON = this.mapper.writeValueAsString(entry);
+		String resultAsJSON = this.mapper.writeValueAsString(result);
+		
+		mvc.perform(put("/movies/update/1")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(entryAsJSON))
+				.andExpect(content().json(resultAsJSON));
+		
 	}
 }
