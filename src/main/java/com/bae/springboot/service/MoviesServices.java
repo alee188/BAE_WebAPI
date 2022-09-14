@@ -25,4 +25,14 @@ public class MoviesServices {
 	public Movies getByID(long id) {
 		return repo.findById(id).get();
 	}
+	// Update requests
+	public Movies update (long id, Movies movie) {
+		Movies existing = this.repo.findByID(id).get();
+		existing.setTitle(movie.getTitle());
+		existing.setGenre(movie.getGenre());
+		existing.setReleaseYear(movie.getReleaseYear());
+		existing.setUserRating(movie.getUserRating());
+		
+		return this.repo.saveAndFlush(existing);
+	}
 }
