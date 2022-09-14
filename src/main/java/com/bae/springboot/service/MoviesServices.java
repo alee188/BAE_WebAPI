@@ -21,4 +21,8 @@ public class MoviesServices {
 	public List<Movies> getALL(){
 		return this.repo.findALL();
 	}
+	// get by ID (read)
+	public Movies getByID(long id) {
+		return repo.findById(id).get();
+	}
 }
