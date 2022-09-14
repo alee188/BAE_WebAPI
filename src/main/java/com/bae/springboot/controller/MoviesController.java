@@ -2,6 +2,7 @@ package com.bae.springboot.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,8 +43,15 @@ public class MoviesController {
 		return this.service.create(movie);
 	}
 	
+	// Put request (UPDATE)
 	@PutMapping("/update/{id}")
 	public Movies update(@PathVariable long id @RequestBody Movies movie) {
 		return this.service.update(id,movie);
+	}
+	
+	// Delete Request (Delete)
+	@DeleteMapping("/delete/{id}")
+		public boolean delete(PathVariable long id) {
+		return this.service.delete(id);
 	}
 }
