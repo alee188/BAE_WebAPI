@@ -1,6 +1,7 @@
 package com.bae.springboot.controller;
 
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
@@ -79,5 +80,13 @@ public class MoviesControllerIntegrationTest {
 				.content(entryAsJSON))
 				.andExpect(content().json(resultAsJSON));
 		
+	}
+	
+	// Delete test
+	@Test
+	public void deleteTest() throws Exception{
+		mvc.perform(delete("/movies/delte/1"))
+			.contentType(MediaType.APPLICATION_JSON)
+			.andExpect(content().string("true"));
 	}
 }
