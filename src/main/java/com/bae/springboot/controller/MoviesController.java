@@ -45,6 +45,7 @@ public class MoviesController {
 	}
 	
 	// Put request (UPDATE)
+	@PutMapping("/update/{id}")
 	public Movies update(@PathVariable long id,@RequestBody Movies movie) {
 		return this.service.update(id, movie);
 	}

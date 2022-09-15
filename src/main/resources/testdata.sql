@@ -1,0 +1,1 @@
+INSERT INTO `movies`(`TITLE`,`GENRE`, `RELEASE_YEAR`,`USER_RATING`) VALUES ('Star Wars', 'Sci-fi', 1977,8.6);
