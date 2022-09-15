@@ -12,11 +12,20 @@
 		<link rel="stylesheet" href="./css/style.css"/>
 
 	</head>
-	<body>
-	    
+	<!--Get all function will be fired when web page is open  -->
+	<body onload="getAll()">
+	    <button type="button" id="createBtn" class="btn btn-primary">Create</button>
+		<button type="button" id="updateBtn" class="btn btn-success">Update</button>
+		<button type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
+		
+
 		<!-- JavaScript Bundle with Popper -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
+		
+		<!-- Axios JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		
+		<!-- My JavaScript file  -->
 	    <script src="./js/main.js"></script>
 	</body>
 </html>
