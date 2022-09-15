@@ -36,7 +36,7 @@ public class MoviesControllerUnitTest {
 			String inputAsJSON = mapper.writeValueAsString(input);
 			
 			// An Object for checking the response
-			Movies response = new Movies(2L,"The Dark Knight", "Action", 2008, 9.0f);
+			Movies response = new Movies(2L,"The Goonies", "Adventure", 1985, 7.7f);
 			String responseAsJSON =mapper.writeValueAsString(response);
 			
 			Mockito.when(service.create(input)).thenReturn(response);
