@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -85,8 +86,10 @@ public class MoviesControllerIntegrationTest {
 	// Delete test
 	@Test
 	public void deleteTest() throws Exception{
+		
 		mvc.perform(delete("/movies/delete/1")
 			.contentType(MediaType.APPLICATION_JSON))
+			
 			.andExpect(content().string("true"));
 	}
 }
