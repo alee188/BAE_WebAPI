@@ -2,6 +2,7 @@ package com.bae.springboot.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import com.bae.springboot.entities.Movies;
 import com.bae.springboot.service.MoviesServices;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/movies") // adds a prefix to the request URL
 public class MoviesController {
 
