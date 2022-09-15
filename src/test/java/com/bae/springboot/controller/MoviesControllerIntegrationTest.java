@@ -45,8 +45,8 @@ public class MoviesControllerIntegrationTest {
 		// covert output(Java) to JSON
 		String resultAsJSON = mapper.writeValueAsString(result);
 		
-		mvc.perform(get("movies/getAll"))
-			.contentType(MediaType.APPLICATION_JSON)
+		mvc.perform(get("/movies/getAll")
+			.contentType(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk())
 			.andExpect(content().json(resultAsJSON));
 		
@@ -85,8 +85,8 @@ public class MoviesControllerIntegrationTest {
 	// Delete test
 	@Test
 	public void deleteTest() throws Exception{
-		mvc.perform(delete("/movies/delte/1"))
-			.contentType(MediaType.APPLICATION_JSON)
+		mvc.perform(delete("/movies/delete/1")
+			.contentType(MediaType.APPLICATION_JSON))
 			.andExpect(content().string("true"));
 	}
 }
