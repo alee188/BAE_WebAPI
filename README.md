@@ -31,7 +31,7 @@ Aim of testing is to achieve a scr/main/java coverage of 80%+. Tests can be divi
 
 
 ```
-![example of a unit test]( https://github.com/alee188/BAE_WebAPI/blob/main/documentation/unit%20test.png)
+![example of a unit test](https://github.com/alee188/BAE_WebAPI/blob/main/documentation/unit%20test.png)
 ```
 
 ### Integration Tests 
