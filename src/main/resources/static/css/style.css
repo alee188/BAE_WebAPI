@@ -1,0 +1,33 @@
+#formDiv{
+    
+        width: 25%;
+        border: solid 2px black;
+        display: inline-grid;
+        margin-top: 2%;
+        margin-left: 2%;
+        padding: 10px;
+    
+}
+
+#resultsDiv{
+    border: 2px solid black;
+    width: 60%;
+    display: inline;
+}
+.entry-parent{
+    padding-left: 30%;
+}
+
+.entry-div {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    height: 2em;
+    background-color: azure;
+    border-color: green;
+    color:black;
+    margin-top: 4px;
+    width: 50%;
+    text-align: center;
+    display: inline-grid;
+}
