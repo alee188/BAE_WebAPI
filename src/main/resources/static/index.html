@@ -14,9 +14,73 @@
 	</head>
 	<!--Get all function will be fired when web page is open  -->
 	<body onload="getAll()">
-	    <button type="button" id="createBtn" class="btn btn-primary">Create</button>
-		<button type="button" id="updateBtn" class="btn btn-success">Update</button>
-		<button type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
+		<!-- <div class="card-group">
+			<div class="card">
+			  <img src="..." class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="">Card title</h5>
+				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			  </div>
+			</div>
+			<div class="card">
+			  <img src="..." class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			  </div>
+			</div>
+			<div class="card">
+			  <img src="..." class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			  </div>
+			</div>
+		  </div> -->
+
+		<form>
+			<div id="formDiv">
+			<div class="input-group mb-3">
+				<input type="number" id="idInput" class="form-control" placeholder="Id">
+				</div>
+			<div class="input-group mb-3">
+				<input type="text" id="titleInput" class="form-control" placeholder="Title">
+			  </div>
+			  <div class="input-group mb-3">
+				<input type="text" id="genreInput" class="form-control" placeholder="Genre">
+			  </div>
+			  <div class="input-group mb-3">
+				<input type="number" id="releaseYearInput"class="form-control" placeholder="Release year">
+			  </div>
+			  <div class="input-group mb-3">
+				<input type="float" id= userRatingInput class="form-control" placeholder="User rating">
+			  </div>
+		  	
+				<button type="button" id="createBtn" class="btn btn-primary">Create</button>
+				<button type="button" id="updateBtn" class="btn btn-success">Update</button>
+				<!-- <button type="button" id="deleteBtn" class="btn btn-danger">Delete</button> -->
+			</div>
+
+		</form>
+
+		
+		<!-- <table class=table>
+			<thead>
+			  <tr>
+				<th scope="col">ID</th>
+				<th scope="col">Title</th>
+				<th scope="col">Genre</th>
+				<th scope="col">Release Year</th>
+				<th scope="col">User rating</th>
+			  </tr>
+			</thead>
+			<tbody id="newRow"></tbody>
+		  </table> -->
+
+		<div id="resultsDiv"></div>
 		
 
 		<!-- JavaScript Bundle with Popper -->
